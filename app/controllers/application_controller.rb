@@ -42,7 +42,7 @@ post '/recipes' do
   redirect to "/recipes/#{@recipe.id}"
 end
 
-post '/recipes/:id/recipe' do
+delete '/recipes/:id/recipe' do
   @recipe = Recipe.find_by_id(params[:id])
   @recipe.delete
   redirect to '/recipes'
