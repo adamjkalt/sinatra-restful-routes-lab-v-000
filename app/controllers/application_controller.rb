@@ -28,7 +28,7 @@ get '/recipes/:id/edit' do
     erb :edit
   end
 
-patch '/recipes/:id' do
+post '/recipes/:id' do
   @recipe = Recipe.find_by_id(params[:id])
   @recipe.name = params[:name]
   @recipe.ingredients = params[:ingredients]
